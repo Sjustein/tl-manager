@@ -23,6 +23,30 @@ namespace tl_manager
         public MainWindow()
         {
             InitializeComponent();
+
+            // Set up the event listeners
+            IpTextBox.TextInput += IpTextBox_TextInput;
+            IpTextBox.GotFocus += IpTextBox_GotFocus;
+            IpTextBox.LostFocus += IpTextBox_LostFocus;
+        }
+
+        private void IpTextBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            // Check if the text should be "placeholderised"
+            if (IpTextBox.Text == "")
+                IpTextBox.Text = "Ip address of the server";
+        }
+
+        private void IpTextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            // Check if the text should be "placeholderised"
+            if (IpTextBox.Text == "Ip address of the server")
+                IpTextBox.Text = "";
+        }
+
+        private void IpTextBox_TextInput(object sender, TextCompositionEventArgs e)
+        {
+            //if ()
         }
     }
 }

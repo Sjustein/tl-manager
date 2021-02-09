@@ -7,4 +7,17 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Assets\loading-temp.png" />
+    <None Remove="loading-temp.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\loading-temp.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="loading-temp.png" />
+  </ItemGroup>
+
 </Project>
